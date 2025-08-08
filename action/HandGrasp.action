@@ -1,0 +1,24 @@
+# Goal
+std_skills/Meta meta
+
+string LEFT_HAND = "__left__"
+string RIGHT_HAND = "__right__"
+string DEFAULT_HAND = "__default__"
+# use one of the standard hand identifiers (LEFT_HAND, RIGHT_HAND, DEFAULT_HAND)
+# or use a custom string for implementation-specific end-effectors.
+# an empty string is equivalent to DEFAULT_HAND (the actual default end-effector is implementation-specific)
+
+
+string hand
+
+int32 CLOSE = 0
+int32 OPEN  = 1
+int32 action
+
+# TODO: maybe add a parameter to specify how much to close the gripper
+---
+# Result
+std_skills/Result result
+---
+# Feedback
+std_skills/Feedback feedback

@@ -20,7 +20,7 @@ find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "action/Grasp.action"
+  "action/HandGrasp.action"
   DEPENDENCIES builtin_interfaces std_skills
 )
 
