@@ -50,7 +50,6 @@
       datatype: manipulation_skills/action/HandGrasp
       functional_domains:
         - manipulation
-        - end_effector_control
       parameters:
         in:
           - name: hand
