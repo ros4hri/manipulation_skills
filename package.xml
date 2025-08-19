@@ -64,13 +64,12 @@
               Any other value will be rejected and the default will be used.
           - name: action
             type: integer
-            default: 0
             description: |
               The gripper action to perform:
                 * `0` - Close the gripper (grasp).
                 * `1` - Open the gripper (release).
               
-              Values outside `[0, 1]` will default to `0` (close).
+              Values outside `[0, 1]` will be clamped to the closest integer.
           - name: closing_position
             type: float
             default: 0.0
