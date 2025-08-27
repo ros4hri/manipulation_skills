@@ -2,8 +2,8 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2025-08-27)
+------------------
 * edit documentation
 * add files
 * "hand" --> "side"
