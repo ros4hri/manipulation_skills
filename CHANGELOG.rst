@@ -2,6 +2,12 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* use int8 instead of int32 to encode hand_grasp action
+* fix syntax of hand_grasp skill documentation
+* Contributors: Séverin Lemaignan
+
 0.1.0 (2025-08-27)
 ------------------
 * edit documentation
