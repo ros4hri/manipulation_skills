@@ -12,9 +12,9 @@ string side
 # Gripper action. Insert an INT: 0 to CLOSE the gripper, 1 to OPEN it. 
 # If a value that is not Integer or in [0, 1] will be set to Default. 
 # Default = 'CLOSE'
-int32 CLOSE = 0
-int32 OPEN  = 1
-int32 action
+int8 CLOSE = 0
+int8 OPEN  = 1
+int8 action
 
 # 'closing_position' defines the closing position of the gripper if specified.  
 # range: [0.0, 1.0] --> 0=Closed; 1=Open (gripper independent)
