@@ -31,20 +31,19 @@
     <skill content-type="yaml">
       id: hand_grasp
       description: |
-        A specialization of the :skill:`manipulation` family that controls a 
-        robotic hand or gripper to either **close** (grasp) or **open** (release).  
-        This skill sends a goal to the specified end-effector (left, right, or default) 
-        with an optional precision setting for the closing position.
+        Controls a robotic hand or gripper to either **close** (grasp) or **open**
+        (release).  This skill sends a goal to the specified end-effector (left, right,
+        or default) with an optional precision setting for the closing position.
 
         Once invoked, the robot will:
           1. Target the desired hand/gripper.
           2. Perform the requested action (close/open).
           3. Report back feedback and a result message indicating success or failure.
 
-        Typical uses include picking up objects, releasing them, or partially closing the 
+        Typical uses include closing a gripper to get hold of an object,
+        releasing an object, or partially closing the
         gripper to a specific position for delicate handling.
 
-        See :ref:`manipulation_skills` for integration details.
       interface: action
       default_interface_path: /skill/hand_grasp
       datatype: manipulation_skills/action/HandGrasp
@@ -54,29 +53,30 @@
         in:
           - name: hand
             type: string
-            default: ""
+            default: "\"\""
             description: |
               Which hand or end-effector to use. Supported values:
-                * `"left"` - Use the left hand.
-                * `"right"` - Use the right hand.
-                * `""` (empty string) - Use the default hand (the right in case of 2 arms).
+                * ``left``: Use the left hand.
+                * ``right``: Use the right hand.
+                * default (empty string): Use the default hand (the right in case of 2 arms).
               
               Any other value will be rejected and the default will be used.
           - name: action
             type: integer
+            default: 0
             description: |
               The gripper action to perform:
-                * `0` - Close the gripper (grasp).
-                * `1` - Open the gripper (release).
+                * ``0``: Close the gripper (grasp).
+                * ``1``: Open the gripper (release).
               
-              Values outside `[0, 1]` will be clamped to the closest integer.
+              Values outside ``[0, 1]`` will be clamped to the closest integer.
           - name: closing_position
             type: float
             default: 0.0
             description: |
-              Defines how far to close the gripper. Range: `[0.0, 1.0]`  
-              (`0.0` = fully closed, `1.0` = fully open).  
-              Values outside the range will be replaced with the default (`0.0`).
+              Defines how far to close the gripper. Range: ``[0.0, 1.0]``  
+              (``0.0`` = fully closed, ``1.0`` = fully open).  
+              Values outside the range will be replaced with the default (``0.0``).
               
               This allows partial grasps for delicate objects.
           - name: meta.priority
@@ -84,20 +84,20 @@
             default: 128
             description: Between 0 and 255. Higher means this skill request will be prioritized.
         out:
-          - name: result
-            type: object
+          - name: result.error_msg
+            type: string
             description: |
-              The result object containing:
-                * `error_msg` - A string describing the execution outcome.
-                  Examples:
-                    * `"Grasp Executed!"` - Successful grasp/release.
-                    * `"Problems during execution.."` - Action failed.
+              A string describing the execution outcome.
+
+              Examples:
+                * ``Grasp Executed!``: Successful grasp/release.
+                * ``Problems during execution.``: Action failed.
           - name: feedback
             type: object
             description: |
               Live updates while the action runs. Can contain:
-                * `data_str` - Text feedback (e.g., which hand, action, position).
-                * `data_bool` - True if action succeeded, False otherwise.
+                * ``data_str``: Text feedback (e.g., which hand, action, position).
+                * ``data_bool``: ``True`` if action succeeded, ``False`` otherwise.
     </skill>
 
   </export>
