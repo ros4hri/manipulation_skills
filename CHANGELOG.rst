@@ -2,6 +2,13 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add skill definition for 'place'
+* typo: {motion->motions}
+* add skill hand_grasp to the motion domain, in addition to manipulation
+* Contributors: Séverin Lemaignan
+
 0.1.1 (2025-09-18)
 ------------------
 * use int8 instead of int32 to encode hand_grasp action
