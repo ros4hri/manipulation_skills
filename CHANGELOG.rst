@@ -2,8 +2,8 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2025-10-27)
+------------------
 * add skill definition for 'place'
 * typo: {motion->motions}
 * add skill hand_grasp to the motion domain, in addition to manipulation
