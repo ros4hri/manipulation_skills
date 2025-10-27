@@ -49,7 +49,7 @@
       datatype: manipulation_skills/action/HandGrasp
       functional_domains:
         - manipulation
-        - motion
+        - motions
       parameters:
         in:
           - name: hand
