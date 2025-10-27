@@ -1,0 +1,14 @@
+# Goal
+std_skills/Meta meta
+
+# the 6D position into which the object should be placed
+geometry_msgs/PoseStamped target
+
+# if true (default), the robot will release the object when the action is completed
+bool release_on_completion
+---
+# Result
+std_skills/Result result
+---
+# Feedback
+std_skills/Feedback feedback

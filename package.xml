@@ -14,6 +14,8 @@
   <depend>action_msgs</depend>
   <depend>builtin_interfaces</depend>
   <depend>std_skills</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
 
   <exec_depend>rosidl_default_runtime</exec_depend>
 
@@ -27,6 +29,45 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+
+    <skill content-type="yaml">
+      id: place
+      description: |
+        Commands the robot to place an object at a specified location.
+        This skill sends a goal to the robot's manipulation system to
+        execute a placing action.
+
+        Once invoked, the robot will:
+          1. Move to the target location.
+          2. Release the object.
+          3. Return to a safe position.
+
+        Typical uses include placing objects on tables, shelves,
+        or designated drop-off points.
+
+        The skill assumes that the robot is already holding an object. See
+        :skill:`grasp` for the grasping action.
+      interface: action
+      default_interface_path: /skill/place
+      datatype: manipulation_skills/action/Place
+      functional_domains:
+        - manipulation
+        - motions
+      parameters:
+        in:
+          - name: target
+            type: :msg:`geometry_msgs/msg/PoseStamped`
+            required: true
+            description: |
+              The target pose where the object should be placed.
+              This includes position and orientation.
+          - name: release_upon_completion
+            type: boolean
+            default: true
+            description: |
+              If ``true``, the robot will release the object upon reaching the target pose.
+              If ``false``, the robot will move to the target pose without releasing the object.
+    </skill>
 
     <skill content-type="yaml">
       id: hand_grasp
