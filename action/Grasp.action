@@ -1,0 +1,23 @@
+# Goal
+# The identifier of the object to be grasped.
+string object_id
+
+# use one of the standard side identifiers (LEFT_SIDE, RIGHT_SIDE, DEFAULT_SIDE)
+# or use a custom string for implementation-specific end-effectors.
+# an empty string is equivalent to DEFAULT_SIDE (the actual default end-effector is implementation-specific)
+string LEFT_SIDE = "left"
+string RIGHT_SIDE = "right"
+string DEFAULT_SIDE = ""
+string side
+
+# the 'strategy' (optional, implementation-dependent) defines how the grasp implementation should perform the
+# grasp. For instance, the strategy could refer to a specific behaviour-tree definition (if the skill implementation
+# uses behaviour trees) or any other kind of 'recipe'.
+#
+# If not set, the skill should use its default/fallback strategy.
+string strategy
+
+---
+std_skills/Result result
+---
+std_skills/Feedback feedback

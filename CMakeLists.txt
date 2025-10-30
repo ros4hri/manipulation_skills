@@ -26,10 +26,11 @@ ament_auto_find_build_dependencies()
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/HandGrasp.action"
   "action/Place.action"
+  "action/Grasp.action"
   DEPENDENCIES builtin_interfaces std_skills geometry_msgs
 )
 
-ament_export_dependencies(rosidl_default_runtime)
+ament_export_dependencies(rosidl_default_runtime rosidl_default_generators)
 
 if(BUILD_TESTING)
     ament_auto_find_test_dependencies()
