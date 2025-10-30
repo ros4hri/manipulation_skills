@@ -2,6 +2,11 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add grasp skill
+* Contributors: davidterkuile
+
 0.2.0 (2025-10-27)
 ------------------
 * add skill definition for 'place'
