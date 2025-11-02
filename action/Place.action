@@ -1,6 +1,14 @@
 # Goal
 std_skills/Meta meta
 
+# use one of the standard side identifiers (LEFT_SIDE, RIGHT_SIDE, DEFAULT_SIDE)
+# or use a custom string for implementation-specific end-effectors.
+# an empty string is equivalent to DEFAULT_SIDE (the actual default end-effector is implementation-specific)
+string LEFT_SIDE = "left"
+string RIGHT_SIDE = "right"
+string DEFAULT_SIDE = ""
+string side
+
 # the 6D position into which the object should be placed
 geometry_msgs/PoseStamped target
 
