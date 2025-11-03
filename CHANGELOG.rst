@@ -2,6 +2,11 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added side param
+* Contributors: michelacavuoto
+
 0.3.0 (2025-10-30)
 ------------------
 * Add grasp skill
