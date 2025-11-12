@@ -17,6 +17,7 @@
   <depend>builtin_interfaces</depend>
   <depend>std_skills</depend>
   <depend>std_msgs</depend>
+  <depend>moveit_msgs</depend>
 
   <exec_depend>rosidl_default_runtime</exec_depend>
 
@@ -125,6 +126,22 @@
             description: |
               If ``true``, the robot will release the object upon reaching the target pose.
               If ``false``, the robot will move to the target pose without releasing the object.
+          - name: side
+            type: string
+            default: "\"\""
+            description: |
+              Which hand or end-effector to use. Supported values:
+                * `left`: Use the left hand.
+                * `right`: Use the right hand.
+                * default (empty string): Use the default hand.
+          - name: constraint
+            type: manipulation_skills/Constraint
+            description: |
+              The motion planning constraint to apply. Contains:
+                * `constraint_type` (uint8): type of constraint
+                    - 0 = FREE_PLAN (no constraint)
+                    - 1 = ORIENTATION_CONSTRAINT
+                * `orientation_constraint` (moveit_msgs/OrientationConstraint): the actual orientation constraint to use if `constraint_type` = ORIENTATION_CONSTRAINT.
     </skill>
 
     <skill content-type="yaml">

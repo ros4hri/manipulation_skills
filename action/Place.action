@@ -1,6 +1,9 @@
 # Goal
 std_skills/Meta meta
 
+# The identifier of the object to be placed.
+string object_id
+
 # use one of the standard side identifiers (LEFT_SIDE, RIGHT_SIDE, DEFAULT_SIDE)
 # or use a custom string for implementation-specific end-effectors.
 # an empty string is equivalent to DEFAULT_SIDE (the actual default end-effector is implementation-specific)
@@ -14,6 +17,9 @@ geometry_msgs/PoseStamped target
 
 # if true (default), the robot will release the object when the action is completed
 bool release_on_completion
+
+# Mapping between constraint type and its axis tolerances
+manipulation_skills/Constraint constraint
 ---
 # Result
 std_skills/Result result

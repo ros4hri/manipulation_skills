@@ -27,7 +27,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "action/HandGrasp.action"
   "action/Place.action"
   "action/Grasp.action"
-  DEPENDENCIES builtin_interfaces std_skills geometry_msgs
+  "msg/Constraint.msg"
+  DEPENDENCIES builtin_interfaces std_skills geometry_msgs moveit_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime rosidl_default_generators)
