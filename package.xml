@@ -30,7 +30,7 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-
+    
     <skill content-type="yaml">
       id: grasp
       description: |
@@ -170,15 +170,6 @@
                 * ``1``: Open the gripper (release).
               
               Values outside ``[0, 1]`` will be clamped to the closest integer.
-          - name: closing_position
-            type: float
-            default: 0.0
-            description: |
-              Defines how far to close the gripper. Range: ``[0.0, 1.0]``  
-              (``0.0`` = fully closed, ``1.0`` = fully open).  
-              Values outside the range will be replaced with the default (``0.0``).
-              
-              This allows partial grasps for delicate objects.
           - name: meta.priority
             type: integer
             default: 128

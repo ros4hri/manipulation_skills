@@ -16,11 +16,6 @@ int8 CLOSE = 0
 int8 OPEN  = 1
 int8 action
 
-# 'closing_position' defines the closing position of the gripper if specified.  
-# range: [0.0, 1.0] --> 0=Closed; 1=Open (gripper independent)
-# If values outside range are given, 'DEFAULT_CLOSING_POSITION' it is going to be used.
-float64 DEFAULT_CLOSING_POSITION = 0.0
-float64 closing_position
 ---
 # Result
 std_skills/Result result
