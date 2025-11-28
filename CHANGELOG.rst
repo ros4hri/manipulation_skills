@@ -2,6 +2,13 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added constraint type
+* removing precision param
+* Implementing 'strategy' parameter for the Grasp skill
+* Contributors: Matteo Villani, michelacavuoto
+
 0.4.0 (2025-11-03)
 ------------------
 * added side param
