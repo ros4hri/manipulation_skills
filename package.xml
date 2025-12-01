@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>manipulation_skills</name>
-  <version>0.5.0</version>
+  <version>0.6.0</version>
   <description>Interfaces for PAL Manipulation skills</description>
   <maintainer email="matteo.villani@pal-robotics.com">Matteo Villani</maintainer>
   <license>Apache License 2.0</license>

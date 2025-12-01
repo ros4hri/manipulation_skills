@@ -2,8 +2,8 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.0 (2025-12-01)
+------------------
 * add version number
 * add github issue templates
 * Contributors: Séverin Lemaignan
