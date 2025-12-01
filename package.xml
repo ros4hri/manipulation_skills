@@ -34,6 +34,7 @@
     
     <skill content-type="yaml">
       id: grasp
+      version: 1.0.0
       description: |
         Commands the robot to grasp a specified object.
         This skill sends a goal to the robot's manipulation system to
@@ -91,6 +92,7 @@
 
     <skill content-type="yaml">
       id: place
+      version: 1.0.0
       description: |
         Commands the robot to place an object at a specified location.
         This skill sends a goal to the robot's manipulation system to
@@ -146,6 +148,7 @@
 
     <skill content-type="yaml">
       id: hand_grasp
+      version: 1.0.0
       description: |
         Controls a robotic hand or gripper to either **close** (grasp) or **open**
         (release).  This skill sends a goal to the specified end-effector (left, right,
