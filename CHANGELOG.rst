@@ -2,6 +2,12 @@
 Changelog for package manipulation_skills
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add version number
+* add github issue templates
+* Contributors: Séverin Lemaignan
+
 0.5.0 (2025-11-28)
 ------------------
 * added constraint type
