@@ -67,14 +67,14 @@
             default: "\"\""
             description: |
               Which hand or end-effector to use. Supported values:
-                * `left`: Use the left hand.
-                * `right`: Use the right hand.
+                * ``left``: Use the left hand.
+                * ``right``: Use the right hand.
                 * default (empty string): Use the default hand.
           - name: strategy
             type: string
             default: "\"\""
             description: |
-              The 'strategy' (optional, implementation-dependent) defines how the grasp 
+              The strategy (optional, implementation-dependent) defines how the grasp 
               implementation should perform the grasp. For instance, the strategy could refer
               to a specific behaviour-tree definition (if the skill implementation uses
               behaviour trees) or any other kind of 'recipe'.
@@ -87,7 +87,8 @@
             type: object
             description: |
               Live updates while the action runs. Can contain:
-                * ``data_str``: Text feedback (e.g., which hand, tree loaded, position, node status..).
+
+              * ``data_str``: Text feedback (e.g., which hand, tree loaded, position, node status..).
     </skill>
 
     <skill content-type="yaml">
@@ -133,17 +134,23 @@
             default: "\"\""
             description: |
               Which hand or end-effector to use. Supported values:
-                * `left`: Use the left hand.
-                * `right`: Use the right hand.
-                * default (empty string): Use the default hand.
+              
+              * ``left``: Use the left hand.
+              * ``right``: Use the right hand.
+              * default (empty string): Use the default hand.
           - name: constraint
-            type: manipulation_skills/Constraint
+            type: :msg:`manipulation_skills/msg/Constraint`
             description: |
               The motion planning constraint to apply. Contains:
-                * `constraint_type` (uint8): type of constraint
-                    - 0 = FREE_PLAN (no constraint)
-                    - 1 = ORIENTATION_CONSTRAINT
-                * `orientation_constraint` (moveit_msgs/OrientationConstraint): the actual orientation constraint to use if `constraint_type` = ORIENTATION_CONSTRAINT.
+              
+              * ``constraint_type`` (uint8): type of constraint
+
+                - ``0``: ``FREE_PLAN`` (no constraint)
+                - ``1``: ``ORIENTATION_CONSTRAINT`` (apply orientation constraint)
+
+              * ``orientation_constraint`` (:msg:`moveit_msgs/OrientationConstraint`): 
+                the actual orientation constraint to use if
+                ``constraint_type = ORIENTATION_CONSTRAINT``.
     </skill>
 
     <skill content-type="yaml">
